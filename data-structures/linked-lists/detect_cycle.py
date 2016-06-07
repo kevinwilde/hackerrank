@@ -11,7 +11,7 @@ class Node(object):
 
 returns 0 if no cycle else return 1
 """
-def HasCycle(head):
+def has_cycle(head):
     fast = head
     slow = head
     while fast.next != None and fast.next.next != None:

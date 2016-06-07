@@ -18,13 +18,13 @@ def MergeLists(headA, headB):
     if headB == None:
         return headA
     if headA.data < headB.data:
-        mergeHelper(headA.next, headB, headA)
+        merge_helper(headA.next, headB, headA)
         return headA
     else:
-        mergeHelper(headA, headB.next, headB)
+        merge_helper(headA, headB.next, headB)
         return headB
     
-def mergeHelper(n1, n2, cur):
+def merge_helper(n1, n2, cur):
     if n1 == None:
         cur.next = n2
         return
@@ -33,7 +33,7 @@ def mergeHelper(n1, n2, cur):
         return
     if n1.data < n2.data:
         cur.next = n1
-        mergeHelper(n1.next, n2, n1)
+        merge_helper(n1.next, n2, n1)
     else:
         cur.next = n2
-        mergeHelper(n1, n2.next, n2)  
+        merge_helper(n1, n2.next, n2)  
